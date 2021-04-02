@@ -1,3 +1,40 @@
-<p>
-navigator works!
-</p>
+<div class="card text-center">
+  <div class="card-header">
+
+    <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item" *ngFor="let type of types">
+          <a class="nav-link active" *ngIf="type; else other_content">{{type.name}}</a>
+          <ng-template #other_content>
+          <a class="nav-link" href="#">{{type.name}}</a>
+          </ng-template>
+        </li>
+
+        
+
+    </ul>
+  </div>
+  <div class="card-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Transaction</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let data of database.data">
+    <tr *ngIf="data.type == 'income'">
+      <th>{{data.name.first}} {{data.name.last}}</th>
+      <td>{{getRandomNumber()}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+<button [routerLink]="['']">Home</button>

@@ -1,4 +1,4 @@
-export interface Database {
+export const database = {
   "total": 100,
   "data": [
     {

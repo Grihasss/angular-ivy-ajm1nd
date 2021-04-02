@@ -12,7 +12,7 @@ import { SummaryComponent } from './summary/summary.component';
   imports:      [ BrowserModule, FormsModule, 
   RouterModule.forRoot([
       { path: '', component: SummaryComponent },
-      { path: 'products/:productId', component: NavigatorComponent },
+      { path: 'navigator', component: NavigatorComponent },
     ])
   ],
   declarations: [ AppComponent, HelloComponent, NavigatorComponent, SummaryComponent ],
