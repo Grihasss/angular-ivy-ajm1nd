@@ -13,6 +13,8 @@ export class NavigatorComponent implements OnInit {
   database=database;
   types=types;
   tabNo=0;
+  tabStr='income';
+  
 
   getRandomNumber() {
     let random = Math.floor(Math.random() * 1000);
