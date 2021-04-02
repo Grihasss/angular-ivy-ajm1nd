@@ -23,7 +23,7 @@
     </tr>
   </thead>
   <tbody *ngFor="let data of database.data">
-    <tr *ngIf="data.type == 'outcome'">
+    <tr *ngIf="data.type == someFunction().name">
       <th>{{data.name.first}} {{data.name.last}}</th>
       <td>{{getRandomNumber()}}</td>
 

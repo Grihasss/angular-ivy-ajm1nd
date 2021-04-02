@@ -15,11 +15,16 @@ export class NavigatorComponent implements OnInit {
   tabNo=0;
   tabStr='income';
   
-  
+  product;
 
   getRandomNumber() {
     let random = Math.floor(Math.random() * 1000);
   return random
+}
+
+someFunction(){
+    return this.product=types.find(product=>product.id === this.tabNo)
+     console.log(this.product)
 }
 
   constructor(
@@ -30,6 +35,8 @@ export class NavigatorComponent implements OnInit {
     const routeParams = this.route.queryParamMap
        .subscribe(params => {
      this.tabNo = +params.get('tab');});;
+
+
 
 
     
