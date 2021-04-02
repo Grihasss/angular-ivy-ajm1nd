@@ -24,6 +24,12 @@ export class NavigatorComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    const routeParams = this.route.queryParamMap
+       .subscribe(params => {
+     this.tabNo = +params.get('tab');
+          
+});;
+    
     
   }
 

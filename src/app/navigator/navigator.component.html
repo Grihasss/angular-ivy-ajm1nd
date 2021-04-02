@@ -3,9 +3,9 @@
 
     <ul class="nav nav-tabs nav-fill card-header-tabs">
         <li class="nav-item" *ngFor="let type of types">
-          <a class="nav-link active" *ngIf="type.id == 0; else other_content" style="text-transform: capitalize;">{{type.name}}</a>
+          <a class="nav-link active" *ngIf="type.id == tabNo; else other_content" style="text-transform: capitalize;" [routerLink]="['navigator']" [queryParams]="{ tab: type.id}">{{type.name}}</a>
           <ng-template #other_content>
-          <a class="nav-link" style="text-transform: capitalize;">{{type.name}}</a>
+          <a class="nav-link" [routerLink]="['navigator']" [queryParams]="{ tab: type.id}" style="text-transform: capitalize;">{{type.name}}</a>
           </ng-template>
         </li>
 

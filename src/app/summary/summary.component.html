@@ -18,7 +18,7 @@
       <div class="card-body">
         <h5 class="card-title" style="text-transform: capitalize;">{{type.name}}</h5>
         <p class="card-text">i</p>
-        <a href="#" class="btn btn-primary float-right">See all</a>
+        <a [routerLink]="['navigator']"[queryParams]="{ tab: type.id}" class="btn btn-primary float-right">See all</a>
       </div>
     </div>
   </div>
