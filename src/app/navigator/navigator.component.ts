@@ -20,12 +20,12 @@ export class NavigatorComponent implements OnInit {
   getRandomNumber() {
     let random = Math.floor(Math.random() * 1000);
   return random
-}
+  }
 
-someFunction(){
+  someFunction(){
     return this.product=types.find(product=>product.id === this.tabNo)
      console.log(this.product)
-}
+  }
 
   constructor(
     private route: ActivatedRoute,
@@ -35,11 +35,6 @@ someFunction(){
     const routeParams = this.route.queryParamMap
        .subscribe(params => {
      this.tabNo = +params.get('tab');});;
-
-
-
-
-    
     
   }
 
