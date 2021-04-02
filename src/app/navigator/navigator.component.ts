@@ -24,17 +24,7 @@ export class NavigatorComponent implements OnInit {
   ) { }
 
   ngOnInit(){
- 
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
-    this.product = products.find(product => product.id === productIdFromRoute);
-    this.Activatedroute.queryParamMap.subscribe(params => { 
-              this.tabNo = +params.get('pageNum')||0;
-              
-          });
-
-
-   
-  
+    
+  }
 
 }
