@@ -1302,5 +1302,4 @@ export const database = {
       "address": "547 Ebony Court, Rivera, Minnesota, 915"
     }
   ]
-
 }

@@ -10,10 +10,35 @@ import {types} from '../typing';
 export class SummaryComponent implements OnInit {
   database=database
   types=types
+  rota;
+  parseds;
+
+  sf() {
+    const picked = (({ data }) => ({ data }))(database);
+    
+    var objectName, nestedObject;
+    var name = "Java";
+    for(var key in database){
+    for(var secondKey in database[key]){
+      if(database[key][secondKey].includes(name)){
+         objectName = key;
+         nestedObject = secondKey;
+      }
+   }
+}
+console.log(objectName + ', ' + nestedObject);
+
+
+
+    this.parseds
+    
+    return this.rota
+  }
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.rota);
   }
 
 }
