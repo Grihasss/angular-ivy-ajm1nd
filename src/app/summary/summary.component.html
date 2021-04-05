@@ -17,7 +17,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title" style="text-transform: capitalize;">{{type.name}}</h5>
-        <p class="card-text">100</p>
+        <p class="card-text">{{count(type.name)}}</p>
         <a [routerLink]="['navigator']"[queryParams]="{ tab: type.id}" class="btn btn-primary float-right">See all</a>
       </div>
     </div>

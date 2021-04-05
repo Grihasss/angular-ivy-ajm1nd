@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 import { SummaryComponent } from './summary/summary.component';
+import { CounterService } from './counter.service';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, 
@@ -16,6 +18,7 @@ import { SummaryComponent } from './summary/summary.component';
     ])
   ],
   declarations: [ AppComponent, HelloComponent, NavigatorComponent, SummaryComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [CounterService]
 })
 export class AppModule { }
